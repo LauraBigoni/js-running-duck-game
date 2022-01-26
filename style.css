@@ -1,0 +1,35 @@
+:root {
+    --road-size: 60px;
+}
+
+#grid {
+    width: calc(var(--road-size) * 10);
+    height: 400px;
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 3px solid white;
+}
+
+#grid > div {
+    width: var(--road-size);
+    height: var(--road-size);
+}
+
+.duck {
+    background-image: url('./images/duck.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;  
+    transition: transform 0.3s;  
+}
+
+.duck-jump {
+    transform: translate(0, -120%);
+}
+
+.plant:not(.duck) {
+    background-image: url('./images/plant.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;    
+}
